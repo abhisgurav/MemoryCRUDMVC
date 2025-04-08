@@ -1,0 +1,33 @@
+﻿@model Employee
+
+
+<div class="container mt-5">
+    <h2 class="text-center text-success">Add New Employee</h2>
+
+    <div class="card shadow-lg p-4">
+        <form method="post" asp-action="Create">
+            <div class="mb-3">
+                <label class="form-label">Employee Name</label>
+                <input type="text" asp-for="Name" class="form-control" placeholder="Enter Name" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Position</label>
+                <input type="text" asp-for="Position" class="form-control" placeholder="Enter Position" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Salary</label>
+                <input type="text" asp-for="Salary" class="form-control" placeholder="Enter Salary" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">
+                <i class="fas fa-plus-circle"></i> Add Employee
+            </button>
+        </form>
+    </div>
+
+    <div class="text-center mt-3">
+        <a href="/Employee/Employees" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿body {
+    background-color: #f8f9fa;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.btn {
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+    .btn:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    }

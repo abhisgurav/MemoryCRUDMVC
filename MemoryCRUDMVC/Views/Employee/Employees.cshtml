@@ -1,0 +1,34 @@
+﻿@model List<Employee>
+<div class="container mt-5">
+    <h2 class="text-center">Employee List</h2>
+    <a href="/Employee/Create" class="btn btn-success mb-3">Add New Employee</a>
+    <table class="table table-hover shadow-lg">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Position</td>
+                    <td>
+                        <a href="/Employee/Edit/@employee.Id" class="btn btn-warning btn-sm">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="/Employee/Delete/@employee.Id" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i> Delete
+                        </a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,31 @@
+﻿@model Employee
+
+@* <h2>Delete Employee</h2>
+<p>Are you sure you want to delete @Model.Name?</p>
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form> *@
+
+
+
+<div class="container mt-5">
+    <h2 class="text-center text-danger">Confirm Deletion</h2>
+
+    <div class="card shadow-lg p-4 text-center">
+        <p>Are you sure you want to delete <strong>@Model.Name</strong>?</p>
+
+        <form method="post" asp-action="DeleteConfirmed">
+            <input type="hidden" asp-for="Id">
+            
+            <button type="submit" class="btn btn-danger">
+                <i class="fas fa-trash"></i> Yes, Delete
+            </button>
+
+            <a href="/Employee/Employees" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Cancel
+            </a>
+        </form>
+    </div>
+</div>
