@@ -12,7 +12,7 @@ COPY . .
 
 # Restore and publish
 RUN dotnet restore "MemoryCRUDMVC.sln"
-RUN dotnet publish "src/MemoryCRUDMVC/MemoryCRUDMVC.csproj" -c Release -o /app/publish
+RUN dotnet publish "MemoryCRUDMVC/MemoryCRUDMVC.csproj" -c Release -o /app/publish
 
 # Final image
 FROM base AS final
