@@ -11,8 +11,8 @@ WORKDIR /src
 COPY . .
 
 # Restore and publish
-RUN dotnet restore "MemoryCRUDMVC.csproj"
-RUN dotnet publish "MemoryCRUDMVC.csproj" -c Release -o /app/publish
+RUN dotnet restore "src/MemoryCRUDMVC/MemoryCRUDMVC.csproj"
+RUN dotnet publish "src/MemoryCRUDMVC/MemoryCRUDMVC.csproj" -c Release -o /app/publish
 
 # Final image
 FROM base AS final
